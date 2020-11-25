@@ -1,0 +1,98 @@
+{% load static %}
+<html>
+	<head>
+		<title>Eventos</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static '/css/owl.carousel.css' %}">
+     <link rel="stylesheet" href="{% static '/css/owl.theme.default.min.css' %}">
+     <link rel="stylesheet" href="{% static '/css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static '/css/tooplate-style.css' %}">
+</head>
+<body>
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand">Han Events</a>
+               </div>
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                         <li><a href="#home" class="smoothScroll">Inicio</a></li>
+                         <li><a href="#feature" class="smoothScroll">Evento</a></li>
+                         <li><a href="#about" class="smoothScroll">Eventos pendientes</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#">Hola <span>Hansel</span></a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- FEATURE -->
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-3 col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h3>HAN EVENTS</h3>
+                              <h1>Tu mejor opción para tus eventos o conciertos</h1>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6">
+                              <p>Copyright &copy; 2020 Hecho por Hansel Tzaj</p>
+                         </div>
+
+                         <div class="col-md-6 col-sm-6">
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script type="text/javascript" src="{% static '/js/jquery.js' %}"></script>
+     <script type="text/javascript" src="{% static '/js/bootstrap.min.js' %}"></script>
+     <script type="text/javascript" src="{% static '/js/jquery.stellar.min.js' %}"></script>
+     <script type="text/javascript" src="{% static '/js/owl.carousel.min.js' %}"></script>
+     <script type="text/javascript" src="{% static '/js/smoothscroll.js' %}"></script>
+     <script type="text/javascript" src="{% static '/js/custom.js' %}"></script>
+
+</body>
+</html>

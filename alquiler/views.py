@@ -16,3 +16,6 @@ def alquiler_nuevo(request):
         formulario = EventoForm()
 
     return render(request, 'alquiler/alquiler_nuevo.html', {'formulario':formulario})
+
+def principal(request):
+    return render(request, 'alquiler/principal.html')

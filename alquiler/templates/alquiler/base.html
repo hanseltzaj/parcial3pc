@@ -1,13 +1,24 @@
 <div class="page-header">
   <h1><a href="/">Alquiler</a></h1>
   {% if messages %}
-  <ul class="messages">
+
     {% for message in messages %}
-    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+     {% if message.tags %} alert{{ message }}{% endif %}
     {% endfor %}
-  </ul>
+
   {% endif %}
 </div>
 
 {% block content %}
 {% endblock %}
+
+
+{% extends 'alquiler/base.html' %}
+
+  {% block content %}
+    <h1>Nuevo Alquiler</h1>
+    <form class="post-form" method="POST"> {% csrf_token %}
+      {{ formulario.as_p }}
+      <button type="submit" class="save btn btn-default">Guardar</button>
+    </form>
+  {% endblock %}
