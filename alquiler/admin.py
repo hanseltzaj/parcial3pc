@@ -1,3 +1,5 @@
 from django.contrib import admin
+from alquiler.models import Evento, EventoAdmin, Material, MaterialAdmin
 
-# Register your models here.
+admin.site.register(Evento, EventoAdmin)
+admin.site.register(Material, MaterialAdmin)
