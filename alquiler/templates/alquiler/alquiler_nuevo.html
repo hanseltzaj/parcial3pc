@@ -1,0 +1,9 @@
+{% extends 'alquiler/base.html' %}
+
+  {% block content %}
+    <h1>Nuevo Alquiler</h1>
+    <form class="post-form" method="POST"> {% csrf_token %}
+      {{ formulario.as_p }}
+      <button type="submit" class="save btn btn-default">Guardar</button>
+    </form>
+  {% endblock %}
