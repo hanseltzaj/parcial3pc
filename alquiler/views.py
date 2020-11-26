@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .forms import EventoForm
 from alquiler.models import Evento, Alquiler
+
+def principal(request):
+    return render(request, 'alquiler/principal.html')
 
 def alquiler_nuevo(request):
     if request.method == "POST":
@@ -12,10 +15,19 @@ def alquiler_nuevo(request):
                 alquiler = Alquiler(material_id=material_id, evento_id=evento.id)
                 alquiler.save()
             messages.add_message(request, messages.SUCCESS, 'Evento Guardado')
+            formulario = EventoForm()
     else:
         formulario = EventoForm()
-
     return render(request, 'alquiler/alquiler_nuevo.html', {'formulario':formulario})
 
-def principal(request):
-    return render(request, 'alquiler/principal.html')
+def alquiler_lista(request):
+    eventos = Evento.objects.filter()
+    return render(request, 'alquiler/alquiler_lista.html', {'eventos': eventos})
+
+def alquiler_detalle(request, pk):
+    evento = get_object_or_404(Evento, pk=pk)
+    materiales = evento.materials.all()
+    total = 0
+    for material in materiales:
+        total = total + material.costo
+    return render(request, 'alquiler/alquiler_detalle.html', {'evento':evento, 'materiales':materiales, 'total':total})
